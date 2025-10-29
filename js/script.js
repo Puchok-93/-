@@ -56,24 +56,12 @@ function initHeaderState() {
 
 function initNavigation() {
 	const navItems = document.querySelectorAll('.navigation-item');
-	const indicator = document.querySelector('.indicator');
-
-	function moveIndicator(element) {
-		const offsetTop = element.offsetTop;
-		indicator.style.transform = `translateY(${offsetTop}px)`;
-	}
 
 	navItems.forEach(item => {
     item.addEventListener('click', e => {
 		navItems.forEach(i => i.classList.remove('active'));
 		item.classList.add('active');
-		moveIndicator(item);
 		});
-	});
-
-	window.addEventListener('load', () => {
-		const activeItem = document.querySelector('.navigation-item.active');
-		moveIndicator(activeItem);
 	});
 }
 
@@ -117,10 +105,72 @@ function initVideoPopup() {
     });
 }
 
+function initScrollNav() {
+	const sections = document.querySelectorAll('section[id]');
+	const navLinks = document.querySelectorAll('.navigation-links a');
+	let isScrollingByClick = false;
+	let currentActiveId = null;
+
+	// Плавный скролл по клику
+	navLinks.forEach(link => {
+		link.addEventListener('click', e => {
+			e.preventDefault();
+			const targetId = link.getAttribute('href').replace('#', '');
+			const targetSection = document.getElementById(targetId);
+
+			if (targetSection) {
+				isScrollingByClick = true;
+
+				targetSection.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+
+				setTimeout(() => { isScrollingByClick = false; }, 800);
+			}
+		});
+	});
+
+	const observer = new IntersectionObserver(
+		entries => {
+			if (isScrollingByClick) return;
+
+			// Найти секцию, которая наиболее видима
+			let mostVisibleSection = null;
+			let maxIntersectionRatio = 0;
+
+			entries.forEach(entry => {
+			if (entry.isIntersecting && entry.intersectionRatio > maxIntersectionRatio) {
+				maxIntersectionRatio = entry.intersectionRatio;
+				mostVisibleSection = entry.target;
+			}
+			});
+
+			if (mostVisibleSection) {
+			const id = mostVisibleSection.getAttribute('id');
+
+			if (id !== currentActiveId) {
+				currentActiveId = id;
+				navLinks.forEach(a => a.classList.remove('active'));
+
+				const activeLink = document.querySelector(`.navigation-links a[href="#${id}"]`);
+				if (activeLink) activeLink.classList.add('active');
+			}
+			}
+		},
+		{
+			threshold: 0.3,
+		}
+	);
+
+	sections.forEach(section => observer.observe(section));
+}
+
 function initApp() {
     initHeaderState();
 	initNavigation();
 	initVideoPopup();
+	initScrollNav();
 }
 
 window.addEventListener('DOMContentLoaded', initApp);
