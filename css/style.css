@@ -10,6 +10,14 @@
     font-family: Mont-SemiBold;
     font-display: swap;
     src: url("../fonts/Mont-SemiBold.woff2") format("woff2"),url("../fonts/Mont-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Mont-Bold;
+    font-display: swap;
+    src: url("../fonts/Mont-Bold.woff2") format("woff2"),url("../fonts/Mont-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal
 }
@@ -2221,7 +2229,6 @@ figure {
     .header-route-btn__icon {
         width: 24px;
         height: 24px;
-
     }
 
     .header-content.js-active  .header-route-btn {
