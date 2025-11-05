@@ -28,6 +28,12 @@
     margin: 65px 0 0 0;
 }
 
+.page-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
 /* Contacts */
 
 .contacts-block {
@@ -40,6 +46,10 @@
     line-height: 1;
     color: #000000;
     text-decoration: none;
+}
+
+.contacts-block__link:hover {
+    color: #D33710;
 }
 
 .contacts-block__link--phone {
@@ -121,6 +131,15 @@
 .contacts-route-btn__icon {
     width: 24px;
     height: 24px;
+    fill: #000000;
+}
+
+.contacts-route-btn:hover .contacts-route-btn__text {
+    color: #D33710;
+}
+
+.contacts-route-btn:hover .contacts-route-btn__icon{
+    fill: #D33710;
 }
 
 /* how-to-get-there */
@@ -184,6 +203,9 @@
     margin: 20px 0 0 0;
 }
 
+.how-to-get-there:hover .how-to-get-there__title {
+    color: #D33710;
+}
 
 /* Social */
 .social-list {
@@ -202,7 +224,7 @@
     width: 66px;
     height: 66px;
     border-radius: 50%;
-    outline: 1px solid #000000;
+    background-color: #000000;
 }
 
 .social-list__link {
@@ -216,11 +238,21 @@
 .social-list__icon {
     width: 30px;
     height: 30px;
+    fill: #ffffff;
+}
+
+
+/* Map */
+
+.contacts-map {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 @media(max-width: 1600px) {
     .contacts .wrapper {
-        padding: 0 10px;
+        padding: 0 66px;
     }
 
     .page-contacts-title {
@@ -317,8 +349,16 @@
 }
 
 @media(max-width: 1280px) {
+    .contacts .wrapper {
+        padding: 0 54px;
+    }
+
     .page-contacts-title {
         font-size: 88px;
+    }
+
+    .page-content {
+        gap: 80px;
     }
 
     /* Contacts */
@@ -333,23 +373,6 @@
 
     .contacts-block__link--email {
         font-size: 14px;
-    }
-
-    /* Label */
-
-    .contacts-label {
-        border-radius: 6px;
-        padding: 10px 29px 11px 26px;
-        gap: 14px;
-    }
-
-    .contacts-label__icon {
-        width: 10px;
-        height: 136px;
-    }
-
-    .contacts-label__text {
-        font-size: 12px;
     }
 
     /* Adresses */
@@ -368,6 +391,26 @@
 }
 
 @media(max-width: 1024px) {
+    .page-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .page-contacts .left-column {
+        max-width: 100%;
+        padding: 118px 0 0 0;
+    }
+
+    .page-contacts-content {
+        max-width: 100%;
+        padding: 0;
+        gap: 49px;
+    }
+
+    .contacts .wrapper {
+        padding: 0 20px;
+    }
+
     .page-contacts-title {
         font-size: 90px;
     }
@@ -398,7 +441,7 @@
 
     /* Adresses */
     .contacts-detail {
-        gap: 30px;
+        gap: 16px;
     }
 
     .company-addresses p {
@@ -409,20 +452,93 @@
     .company-addresses p span {
         font-size: 16px;
     }
+
+    .contacts-route-btn {
+        gap: 10px;
+        padding: 22px 0;
+    }
+
+    .contacts-route-btn__text {
+        font-size: 18px;
+    }
+
+    .contacts-route-btn__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .how-to-get-there {
+        max-width: 100%;
+        padding: 25px 29px;
+    }
+
+    .how-to-get-there__title {
+        font-size: 22px;
+    }
+
+    .how-to-get-there__title::before, 
+    .how-to-get-there__title::after {
+        width: 24px;
+        height: 3px;
+        top: 11px;
+        right: -6px;
+    }
 }
 
 @media(max-width: 767px) {
+    .page-content {
+        gap: 30px;
+    }
+
+    .page-contacts .left-column {
+        padding: 86px 0 0 0;
+    }
+
+    .contacts .wrapper {
+        padding: 0 10px;
+    }
+
     .page-contacts-title {
         font-size: 48px;
+    }
+
+    .page-contacts-content {
+        margin: 40px 0 0 0;
+        gap: 33px;
     }
 
     /* Contacts */
 
     .contacts-block {
-        gap: 20px;
+        gap: 23px;
     }
 
     .contacts-block__link--email {
         font-size: 20px;
+    }
+
+    .contacts-label {
+        padding: 10px 40px 11px 40px;
+    }
+
+    .company-addresses {
+        margin: -12px 0 0 0;
+    }
+
+    .contacts-route-btn {
+        margin: 3px 0 0 0;
+    }
+
+    .how-to-get-there {
+        padding: 28px 29px;
+    }
+
+    .how-to-get-there__title {
+        font-size: 20px;
+    }
+
+    .social-list__social {
+        width: 60px;
+        height: 60px;
     }
 }
