@@ -2195,6 +2195,7 @@ figure {
     .header-social__icon {
         width: 25px;
         height: auto;
+        fill: #000000;
     }
 
     .header-content.js-active  .header-social-list {
@@ -2229,6 +2230,7 @@ figure {
     .header-route-btn__icon {
         width: 24px;
         height: 24px;
+        fill: #ffffff;
     }
 
     .header-content.js-active  .header-route-btn {
