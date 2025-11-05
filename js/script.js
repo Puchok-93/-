@@ -72,6 +72,10 @@ function initVideoPopup() {
 	const closeVideoPopupBtn = document.querySelector('.overlay-close-btn');
 	const video = document.getElementById('promo-sulanzh');
 
+	if(!video) {
+		return
+	}
+
 	function openVideoPopup() {
 		overlay.classList.add('fadeIn');
 		overlay.classList.remove('fadeOut');
@@ -166,11 +170,41 @@ function initScrollNav() {
 	sections.forEach(section => observer.observe(section));
 }
 
+function initDropDown() {
+	const dropdown = document.querySelectorAll(".how-to-get-there");
+
+	if(!dropdown) {
+		return
+	}
+
+	function dropdownElementClickHandler(evt) {
+		const clickedItem = evt.currentTarget;
+		const clickedDescr = clickedItem.querySelectorAll(".how-to-get-there__description");
+		clickedItem.classList.toggle('js-active');
+
+		if (clickedItem.classList.contains("js-active")) {
+			clickedDescr.forEach(item => {
+			item.style.maxHeight = item.scrollHeight + "px";
+			})
+		} else {
+			clickedDescr.forEach(item => {
+			item.style.maxHeight = null;
+			item.style.marginBottom = null;
+			})
+		} 
+	}
+
+	dropdown.forEach(element => {
+		element.addEventListener('click', dropdownElementClickHandler);
+	})
+}
+
 function initApp() {
     initHeaderState();
 	initNavigation();
 	initVideoPopup();
 	initScrollNav();
+	initDropDown();
 }
 
 window.addEventListener('DOMContentLoaded', initApp);
