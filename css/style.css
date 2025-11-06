@@ -991,7 +991,7 @@ figure {
     border-radius: 20px 0 0 20px;
     overflow: hidden;
     padding: 6px 4px 6px 7px;
-    z-index: 1000000;
+    z-index: 100;
 }
 
 .navigation-item {
@@ -1994,8 +1994,13 @@ figure {
     /* Vertical Navigation */
 
     .navigation-links {
+        top: 53%;
         border-radius: 15px 0 0 15px;
         padding: 5px 2px 6px 5px;
+    }
+
+    .navigation-item {
+        padding: 6px 2px;
     }
 }
 
