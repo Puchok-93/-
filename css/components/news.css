@@ -7,7 +7,7 @@
 }
 
 .page-news {
-    padding: 227px 0 111px;
+    padding: 225px 0 111px;
 }
 
 .news .wrapper {
@@ -16,14 +16,6 @@
 
 .wrapper--news {
     padding: 0 10px;
-}
-
-.page-news-title {
-    font-size: 131px;
-    line-height: 1;
-    color: #000000;
-    padding: 0;
-    margin: 0;
 }
 
 /* NewsByYear */
@@ -38,7 +30,6 @@
 }
 
 .news-by-year-list__btn {
-    font-family: Mont-Regular;
     width: 123px;
     height: 54px;
     display: flex;
@@ -190,7 +181,7 @@
 
 @media(max-width: 1600px) {
     .page-news {
-        padding: 190px 0 92px;
+        padding: 200px 0 92px;
     }
 
     .news .wrapper {
@@ -201,10 +192,6 @@
     .wrapper--news {
         max-width: 1489px;
         padding: 0 10px;
-    }
-
-    .page-news-title {
-        font-size: 109px;
     }
 
     /* NewsByYear */
@@ -339,11 +326,7 @@
 
 @media(max-width: 1024px) {
     .page-news {
-        padding: 119px 0 60px;
-    }
-
-    .page-news-title {
-        font-size: 90px;
+        padding: 120px 0 60px;
     }
 
     .news .wrapper {
@@ -394,11 +377,7 @@
 
 @media(max-width: 767px) {
     .page-news {
-        padding: 86px 0 60px;
-    }
-
-    .page-news-title {
-        font-size: 48px;
+        padding: 85px 0 60px;
     }
 
     .news .wrapper {

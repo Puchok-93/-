@@ -8,15 +8,7 @@
 
 .page-contacts .left-column {
     max-width: 650px;
-    padding: 227px 0 0 0;
-}
-
-.page-contacts-title {
-    font-size: 131px;
-    line-height: 1;
-    color: #000000;
-    padding: 0;
-    margin: 0;
+    padding: 225px 0 0 0;
 }
 
 .page-contacts-content {
@@ -53,7 +45,6 @@
 }
 
 .contacts-block__link--phone {
-    font-family: Mont-Bold;
     font-size: 32px;
     font-weight: 600;
 }
@@ -93,24 +84,16 @@
 }
 
 .company-addresses p {
-    font-family: Mont-Regular;
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 21px;
     color: #000000;
     margin: 0;
-}
-
-.company-addresses p span.bold {
-    font-family: Mont-Bold;
-    font-size: 16px;
-    font-weight: 600;
 }
 
 /* Route */
 
 .contacts-route-btn {
-    font-family: Mont-Regular;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,10 +238,6 @@
         padding: 0 66px;
     }
 
-    .page-contacts-title {
-        font-size: 110px;
-    }
-
     .page-contacts-content {
         max-width: 520px;
         gap: 41px;
@@ -353,10 +332,6 @@
         padding: 0 54px;
     }
 
-    .page-contacts-title {
-        font-size: 88px;
-    }
-
     .page-content {
         gap: 80px;
     }
@@ -398,7 +373,7 @@
 
     .page-contacts .left-column {
         max-width: 100%;
-        padding: 118px 0 0 0;
+        padding: 120px 0 0 0;
     }
 
     .page-contacts-content {
@@ -409,10 +384,6 @@
 
     .contacts .wrapper {
         padding: 0 20px;
-    }
-
-    .page-contacts-title {
-        font-size: 90px;
     }
 
     /* Contacts */
@@ -491,15 +462,11 @@
     }
 
     .page-contacts .left-column {
-        padding: 86px 0 0 0;
+        padding: 85px 0 0 0;
     }
 
     .contacts .wrapper {
         padding: 0 10px;
-    }
-
-    .page-contacts-title {
-        font-size: 48px;
     }
 
     .page-contacts-content {
