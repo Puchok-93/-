@@ -234,6 +234,10 @@
 }
 
 @media(max-width: 1600px) {
+    .page-contacts .left-column {
+        padding: 200px 0 0 0;
+    }
+
     .contacts .wrapper {
         padding: 0 66px;
     }
