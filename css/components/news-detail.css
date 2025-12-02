@@ -89,7 +89,23 @@
     font-size: 16px;
     line-height: 20px;
     color: #000000;
-    margin: 0;
+    margin: 0 0 15px;
+}
+
+.news-detail-content ul,
+.news-detail-content ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: disc;
+    margin: 15px 30px;
+}
+
+.news-detail-content ul li,
+.news-detail-content ol li {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }
 
 .news-detail-img {
