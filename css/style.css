@@ -799,6 +799,10 @@ figure {
     max-width: 506px;
 }
 
+.header--ny .header-block.js-active {
+    max-width: 530px;
+}
+
 .header-block.js-active .header-nav {
     gap: 0;
 }
@@ -894,6 +898,16 @@ figure {
 .header-sub-nav__close-btn:hover .line,
 .header-sub-nav__close-btn:focus .line {
     background-color: #F04C23;
+}
+
+/* Header Modifiers */
+
+.header--ny .header-logo {
+    margin: -6px 0 0;
+}
+
+.header--ny .header-block {
+    max-width: 880px;
 }
 
 /* Video popup */
@@ -1769,6 +1783,10 @@ figure {
     .header-contact__phone {
         font-size: 16px;
         padding: 18px 20px;
+    }
+
+    .header--ny .header-logo {
+        margin: 0;
     }
 
     /* Main Block */
